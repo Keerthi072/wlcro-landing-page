@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/lexend-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/lexend-semiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: 'Lexend', ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  font-family: inherit;
+}
+
+@keyframes marquee-22 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-30 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-22 {
+  animation: marquee-22 22s linear infinite;
+}
+
+.animate-marquee-30 {
+  animation: marquee-30 30s linear infinite;
+}
