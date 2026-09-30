@@ -6,11 +6,15 @@ import SecuritySection from '@/components/SecuritySection';
 import CrossBorderSection from '@/components/CrossBorderSection';
 import AIAssistantSection from '@/components/AIAssistantSection';
 import SummitSection from '@/components/SummitSection';
+import CatchUpSection from '@/components/CatchUpSection';
+import GoalSection from '@/components/GoalSection';
+import FooterSection from '@/components/FooterSection';
+import ContactModal from '@/components/ContactModal';
 
 function App() {
   return (
     <div className="flex flex-col bg-[#0d0d0d]">
-      <div className="h-screen flex flex-col overflow-hidden">
+      <div className="relative">
         <Navbar />
         <HeroSection />
       </div>
@@ -19,7 +23,11 @@ function App() {
       <SecuritySection />
       <CrossBorderSection />
       <AIAssistantSection />
+      <CatchUpSection />
       <SummitSection />
+      <GoalSection />
+      <FooterSection />
+      <ContactModal />
     </div>
   );
 }

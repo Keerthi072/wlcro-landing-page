@@ -52,3 +52,72 @@ body {
 .animate-marquee-30 {
   animation: marquee-30 30s linear infinite;
 }
+
+/* ── Summit weather-effect keyframes ──────────────────────────── */
+@keyframes summit-rain {
+  from { background-position: 0 0; }
+  to { background-position: -200px 600px; }
+}
+
+@keyframes summit-cloud-drift {
+  0% { transform: translateX(-10%); }
+  100% { transform: translateX(10%); }
+}
+
+@keyframes summit-sun-pulse {
+  0%, 100% { opacity: 0.35; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.08); }
+}
+
+/* ── Summit range-slider styling ─────────────────────────────── */
+.summit-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+  cursor: pointer;
+}
+.summit-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease;
+}
+.summit-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+.summit-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.summit-slider::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Remove Spline Watermark Badge ────────────────────────────── */
+a[href*="spline.design"],
+#spline-watermark,
+[data-spline="badge"],
+.spline-watermark,
+div[style*="position: absolute"][style*="bottom"][style*="right"] a[href*="spline"],
+div:has(> a[href*="spline.design"]) {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}

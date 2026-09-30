@@ -16,6 +16,8 @@ declare namespace JSX {
         'interaction-prompt'?: string;
         'shadow-intensity'?: string;
         exposure?: string;
+        'environment-image'?: string;
+        'tone-mapping'?: string;
       },
       HTMLElement
     >;
