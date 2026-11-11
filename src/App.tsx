@@ -1,6 +1,6 @@
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
-import InfoSection from '@/components/InfoSection';
+import TrustBar from '@/components/TrustBar';
 import ServicesSection from '@/components/ServicesSection';
 import SecuritySection from '@/components/SecuritySection';
 import CrossBorderSection from '@/components/CrossBorderSection';
@@ -18,10 +18,10 @@ function App() {
         <Navbar />
         <HeroSection />
       </div>
-      <InfoSection />
+      <TrustBar />
       <ServicesSection />
-      <SecuritySection />
       <CrossBorderSection />
+      <SecuritySection />
       <AIAssistantSection />
       <CatchUpSection />
       <SummitSection />

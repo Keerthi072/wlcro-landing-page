@@ -8,58 +8,54 @@ import {
 
 function CatchUpSection() {
   return (
-    <section className="bg-[#0d0d0d] px-4 md:px-6 py-24 md:py-32">
+    <section className="bg-[#0d0d0d] px-4 md:px-6 py-20 md:py-28">
       {/* ── Perspective Card Container with spatial depth ── */}
       <PerspectiveCard
-        tiltAngle={6}
-        className="relative w-full max-w-[88rem] mx-auto rounded-[2rem] overflow-hidden px-6 py-20 md:py-28 shadow-[0_1px_2px_rgba(0,0,0,0.04)] flex flex-col items-center justify-center text-center"
+        tiltAngle={5}
+        className="relative w-full max-w-[84rem] mx-auto rounded-[2rem] md:rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center text-center px-6 py-16 sm:py-20 md:py-24"
         style={{ isolation: 'isolate' }}
       >
-        {/* ── Mesh gradient background inside container ─────────────── */}
+        {/* ── Background image matching uploaded Image 2 ─────────────── */}
         <div
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat pointer-events-none"
           style={{
             zIndex: 0,
-            background: `
-              radial-gradient(circle at 85% 15%, #8CF0CE 0%, transparent 55%),
-              radial-gradient(circle at 40% 55%, #6BC4C9 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, #4A8FC0 0%, transparent 55%),
-              linear-gradient(315deg, #7FEBC4 0%, #5DA9C7 100%)
-            `,
+            backgroundImage: 'url(/models/catch-up-bg.png)',
           }}
         />
 
-        {/* ── Staggered inner content ──────────────────────────────── */}
+        {/* ── Staggered inner content matching uploaded UI ──────────── */}
         <StaggerReveal
-          stagger={0.14}
-          className="relative max-w-3xl mx-auto flex flex-col items-center"
+          stagger={0.12}
+          className="relative max-w-2xl mx-auto flex flex-col items-center justify-center text-center"
           style={{ zIndex: 10 }}
         >
           <RevealItem>
             <h2
-              className="text-black text-4xl md:text-6xl lg:text-7xl font-medium leading-none mb-6"
-              style={{ letterSpacing: '-0.04em' }}
+              className="text-[#181D19] text-3xl sm:text-4xl md:text-5xl font-medium leading-tight mb-3 md:mb-4"
+              style={{ letterSpacing: '-0.035em' }}
             >
               Catch Up
             </h2>
           </RevealItem>
 
-          <RevealItem delay={0.1}>
+          <RevealItem delay={0.08}>
             <p
-              className="text-black/80 text-xl md:text-3xl lg:text-4xl font-normal leading-snug max-w-2xl mb-10"
+              className="text-[#414942] text-sm sm:text-base md:text-[17px] font-normal leading-relaxed max-w-xl mx-auto mb-6 md:mb-8"
               style={{ letterSpacing: '-0.01em' }}
             >
-              Behind on a goal you need to hit soon? Start from a plan a wealth
-              manager already built, or get one made around your exact numbers.
+              Behind on a goal you need to hit soon?
+              <br className="hidden sm:inline" />{' '}
+              Start from a plan a wealth manager already built, or get one made around your exact numbers.
             </p>
           </RevealItem>
 
-          <RevealItem delay={0.2}>
+          <RevealItem delay={0.16}>
             <motion.button
-              whileHover={{ scale: 1.04 }}
+              whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               onClick={openContactModal}
-              className="inline-flex items-center justify-center bg-transparent border border-black/30 text-black text-base font-medium px-7 py-3 rounded-full hover:bg-black hover:text-white hover:border-black transition-colors duration-200 cursor-pointer shadow-sm"
+              className="inline-flex items-center justify-center bg-[#384B3D] hover:bg-[#2B3B2F] text-[#E1ECE3] text-xs sm:text-sm font-medium px-6 py-2.5 rounded-[10px] shadow-sm transition-colors duration-200 cursor-pointer"
             >
               Book a free consultation
             </motion.button>
